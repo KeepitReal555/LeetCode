@@ -22,3 +22,12 @@ class Solution:
                         nums[new_index] = temp[index]
 
         print(nums)
+
+    def rotate2(self, nums, k):
+        """
+        这方法爆炸
+        :type nums: List[int]
+        :type k: int
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        nums[:] = nums[len(nums) - k:] + nums[:len(nums) - k]
